@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+  <mapper namespace="org.bigbird.note.dao.AssociationDao">
+  	<!-- 执行完insert语句后，会将数据库生成的主键值返回给Emp参数的id属性 -->
+  	<insert id="save" parameterType="org.bigbird.note.entity.Emp" useGeneratedKeys="true" keyProperty="id">
+  	
+  		insert into cn_emp(name,age) values(#{name},#{age})
+  	</insert>
+  	
+  </mapper>
